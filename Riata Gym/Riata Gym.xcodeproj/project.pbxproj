@@ -24,6 +24,10 @@
 		CDE6CEA41673DBC4004686C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE6CE831673DBC4004686C4 /* CoreData.framework */; };
 		CDE6CEAC1673DBC4004686C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDE6CEAA1673DBC4004686C4 /* InfoPlist.strings */; };
 		CDE6CEAF1673DBC4004686C4 /* Riata_GymTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE6CEAE1673DBC4004686C4 /* Riata_GymTests.m */; };
+		CDE6CEBA1673E97C004686C4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE6CEB91673E97C004686C4 /* Person.m */; };
+		CDE6CEC01673E99F004686C4 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE6CEBF1673E99F004686C4 /* Workout.m */; };
+		CDE6CEC31673E9AB004686C4 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE6CEC21673E9AB004686C4 /* Exercise.m */; };
+		CDE6CEC61673E9BA004686C4 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE6CEC51673E9BA004686C4 /* Set.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,14 @@
 		CDE6CEAB1673DBC4004686C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CDE6CEAD1673DBC4004686C4 /* Riata_GymTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Riata_GymTests.h; sourceTree = "<group>"; };
 		CDE6CEAE1673DBC4004686C4 /* Riata_GymTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Riata_GymTests.m; sourceTree = "<group>"; };
+		CDE6CEB81673E97C004686C4 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		CDE6CEB91673E97C004686C4 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		CDE6CEBE1673E99F004686C4 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
+		CDE6CEBF1673E99F004686C4 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
+		CDE6CEC11673E9AB004686C4 /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
+		CDE6CEC21673E9AB004686C4 /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
+		CDE6CEC41673E9BA004686C4 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
+		CDE6CEC51673E9BA004686C4 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +132,17 @@
 		CDE6CE851673DBC4004686C4 /* Riata Gym */ = {
 			isa = PBXGroup;
 			children = (
+				CDE6CEC41673E9BA004686C4 /* Set.h */,
+				CDE6CEC51673E9BA004686C4 /* Set.m */,
+				CDE6CEC11673E9AB004686C4 /* Exercise.h */,
+				CDE6CEC21673E9AB004686C4 /* Exercise.m */,
+				CDE6CEBE1673E99F004686C4 /* Workout.h */,
+				CDE6CEBF1673E99F004686C4 /* Workout.m */,
 				CDE6CE8E1673DBC4004686C4 /* AppDelegate.h */,
 				CDE6CE8F1673DBC4004686C4 /* AppDelegate.m */,
 				CDE6CE971673DBC4004686C4 /* Riata_Gym.xcdatamodeld */,
+				CDE6CEB81673E97C004686C4 /* Person.h */,
+				CDE6CEB91673E97C004686C4 /* Person.m */,
 				CDE6CE861673DBC4004686C4 /* Supporting Files */,
 			);
 			path = "Riata Gym";
@@ -273,6 +293,10 @@
 				CDE6CE8C1673DBC4004686C4 /* main.m in Sources */,
 				CDE6CE901673DBC4004686C4 /* AppDelegate.m in Sources */,
 				CDE6CE991673DBC4004686C4 /* Riata_Gym.xcdatamodeld in Sources */,
+				CDE6CEBA1673E97C004686C4 /* Person.m in Sources */,
+				CDE6CEC01673E99F004686C4 /* Workout.m in Sources */,
+				CDE6CEC31673E9AB004686C4 /* Exercise.m in Sources */,
+				CDE6CEC61673E9BA004686C4 /* Set.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
