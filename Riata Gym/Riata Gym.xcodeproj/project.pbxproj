@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDA657C41673EBB20081CF90 /* iPhone Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA657C31673EBB20081CF90 /* iPhone Storyboard.storyboard */; };
 		CDE6CE7E1673DBC4004686C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE6CE7D1673DBC4004686C4 /* UIKit.framework */; };
 		CDE6CE801673DBC4004686C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE6CE7F1673DBC4004686C4 /* Foundation.framework */; };
 		CDE6CE821673DBC4004686C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE6CE811673DBC4004686C4 /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CDA657C31673EBB20081CF90 /* iPhone Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "iPhone Storyboard.storyboard"; path = "../iPhone Storyboard.storyboard"; sourceTree = "<group>"; };
 		CDE6CE791673DBC4004686C4 /* Riata Gym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Riata Gym.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE6CE7D1673DBC4004686C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CDE6CE7F1673DBC4004686C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -132,6 +134,7 @@
 		CDE6CE851673DBC4004686C4 /* Riata Gym */ = {
 			isa = PBXGroup;
 			children = (
+				CDA657C31673EBB20081CF90 /* iPhone Storyboard.storyboard */,
 				CDE6CEC41673E9BA004686C4 /* Set.h */,
 				CDE6CEC51673E9BA004686C4 /* Set.m */,
 				CDE6CEC11673E9AB004686C4 /* Exercise.h */,
@@ -256,6 +259,7 @@
 				CDE6CE921673DBC4004686C4 /* Default.png in Resources */,
 				CDE6CE941673DBC4004686C4 /* Default@2x.png in Resources */,
 				CDE6CE961673DBC4004686C4 /* Default-568h@2x.png in Resources */,
+				CDA657C41673EBB20081CF90 /* iPhone Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +467,7 @@
 				CDE6CEB41673DBC4004686C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDE6CEB51673DBC4004686C4 /* Build configuration list for PBXNativeTarget "Riata GymTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +476,7 @@
 				CDE6CEB71673DBC4004686C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
