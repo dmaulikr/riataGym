@@ -7,20 +7,33 @@
 //
 
 #import "userView.h"
+#import "AppDelegate.h"
+#import "Person.h"
 
 
 @interface userView ()
-
-@end
+    @end
 
 @implementation userView {
-    NSArray *recipes;
+    NSMutableArray *users;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Initialize table data
+    // Get table data from core data
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //Grab context to core data per Apple Example
+    NSManagedObjectContext *context = [appDelegate  managedObjectContext];
+    //Grab the specific entity within the core data model
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Person" inManagedObjectContext:context];
+    //Create new fetch request object
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    //Set Entity for the fetch request
+    [request setEntity:entity];
+    NSError *error;
+    users = ((NSMutableArray*)[context executeFetchRequest:request error:&error]);
 }
 
 
@@ -37,20 +50,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [recipes count];
+    return [users count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"RecipeCell";
+    static NSString *simpleTableIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-    
-    cell.textLabel.text = [recipes objectAtIndex:indexPath.row];
+    cell.textLabel.text = ((Person*)[users objectAtIndex:indexPath.row]).name;
     return cell;
 }
 

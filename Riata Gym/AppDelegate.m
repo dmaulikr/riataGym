@@ -36,7 +36,7 @@
     NSError *error;
     NSArray *array = [context executeFetchRequest:request error:&error];
     Person *person = nil;
-    Workout *work = nil;
+  //  Workout *work = nil;
     if(array == nil)
     {
         NSLog(@"Error array is NIL");
@@ -45,7 +45,7 @@
     {
        person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:context];
         person.name = @"Patrick";
-        work = [NSEntityDescription insertNewObjectForEntityForName:@"Workout" inManagedObjectContext:context];
+        /*work = [NSEntityDescription insertNewObjectForEntityForName:@"Workout" inManagedObjectContext:context];
         work.name = @"Bicep Curls";
         [person addWorkoutObject:work];
         //NSLog(person.name);*/
