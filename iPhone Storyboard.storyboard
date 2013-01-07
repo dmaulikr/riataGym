@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pyE-Mp-PEb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="HKc-N1-ULQ">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="pyE-Mp-PEb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NdY-59-aty">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dBC-mw-pzy" kind="relationship" relationship="rootViewController" id="Wqd-AT-wUP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="217-vv-chd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-358" y="-506"/>
+        </scene>
+        <!--User View - Users-->
+        <scene sceneID="eDK-mJ-T6U">
+            <objects>
+                <viewController id="dBC-mw-pzy" customClass="userView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2O0-5g-O1F">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FET-os-JFk">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dBC-mw-pzy" id="SQ4-iq-Hmx"/>
+                                    <outlet property="delegate" destination="dBC-mw-pzy" id="ABp-dg-cmh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FET-os-JFk" firstAttribute="top" secondItem="2O0-5g-O1F" secondAttribute="top" type="default" id="4ep-nd-2SG"/>
+                            <constraint firstItem="FET-os-JFk" firstAttribute="leading" secondItem="2O0-5g-O1F" secondAttribute="leading" type="default" id="5bN-ae-J0f"/>
+                            <constraint firstItem="FET-os-JFk" firstAttribute="trailing" secondItem="2O0-5g-O1F" secondAttribute="trailing" type="default" id="mJR-It-VWd"/>
+                            <constraint firstItem="FET-os-JFk" firstAttribute="bottom" secondItem="2O0-5g-O1F" secondAttribute="bottom" type="default" id="xFb-8N-Wlk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Users" id="t8K-gk-SJz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xsm-EV-kiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37" y="-508"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="userView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/userView.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

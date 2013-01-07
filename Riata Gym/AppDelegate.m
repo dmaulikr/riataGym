@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Person.h"
+#import "Workout.h"
 
 @implementation AppDelegate
 
@@ -16,11 +18,45 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //Dont need this cause I am using storyboardx
+   /* self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    return YES;
+    */
+    //Grab context to core data per Apple Example
+    NSManagedObjectContext *context = [self managedObjectContext];
+    //Grab the specific entity within the core data model
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Person" inManagedObjectContext:context];
+    //Create new fetch request object
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    //Set Entity for the fetch request
+    [request setEntity:entity];
+    NSError *error;
+    NSArray *array = [context executeFetchRequest:request error:&error];
+    Person *person = nil;
+    Workout *work = nil;
+    if(array == nil)
+    {
+        NSLog(@"Error array is NIL");
+    }
+    else if ([array count] == 0)
+    {
+       person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:context];
+        person.name = @"Patrick";
+        work = [NSEntityDescription insertNewObjectForEntityForName:@"Workout" inManagedObjectContext:context];
+        work.name = @"Bicep Curls";
+        [person addWorkoutObject:work];
+        //NSLog(person.name);*/
+    }
+    else{
+        
+        
+    }
+    [context save:&error];
+    
+      return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
